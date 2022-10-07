@@ -15,7 +15,7 @@ func (d *InvoiceData) CalculateTotalAmount() int64 {
 }
 
 func (d *InvoiceData) ReturnItemTotalAmount() float64 {
-	totalAmount := d.Quantity * d.Price
+	totalAmount := d.CalculateTotalAmount()
 	converted := float64(totalAmount) / 100
 	return converted
 }
